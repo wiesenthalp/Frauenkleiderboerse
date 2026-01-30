@@ -46,6 +46,20 @@ if alle:
 
     st.markdown("---")
 
+    # Zusatz-Statistiken
+    st.subheader("📈 Weitere Kennzahlen")
+
+    anzahl_belege = len(alle)
+    anzahl_artikel = len(df_merged)
+    durchschnitt_preis = df_merged["Preis"].mean()
+
+    colA, colB, colC = st.columns(3)
+    colA.metric("Anzahl Belege", anzahl_belege)
+    colB.metric("Verkaufte Artikel", anzahl_artikel)
+    colC.metric("Ø Artikelpreis", f"{durchschnitt_preis:.2f} €")
+
+    st.markdown("---")
+
     # Umsatz pro Verkäufer
     st.subheader("📦 Gesamtumsatz pro Verkäufer")
     umsatz_pro_verkaeufer = df_merged.groupby("Verkäufer")["Preis"].sum().sort_values(ascending=False)
@@ -68,6 +82,17 @@ if alle:
     ax2.set_title("Spenden pro Verkäufer")
     st.pyplot(fig2)
 
+
+    # Histogramm Preisverteilung
+    st.subheader("📊 Preisverteilung der verkauften Artikel")
+
+    fig3, ax3 = plt.subplots(figsize=(8, 5))
+    ax3.hist(df_merged["Preis"], bins=20)
+    ax3.set_xlabel("Preis (€)")
+    ax3.set_ylabel("Häufigkeit")
+    ax3.set_title("Histogramm der Verkaufspreise")
+
+    st.pyplot(fig3)
 
 
 else:
