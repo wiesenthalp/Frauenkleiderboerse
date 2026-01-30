@@ -1,0 +1,23 @@
++ Spende 10 % in verkaufer.xlsx hinzufügen. Auf Rechnungen immer die 10% abziehen, Spendenbetrag berechnen, Auszahlungssumme anzeigen. 
++ Statistik: Gesamtsumme aller Verkäufe, aller Spenden. 
+PRÜFEN; Läuft bei mir - Artikel löschen hinzufügen.
++ Adresse kann weg.
++ Name und Vorname in einer Spalte.
++ Seitenformat DIN A4
++ Statt Rechnung alles Beleg nennen!!!
++ Auf Auswertungspdf hinzugügen: 
+
+
+FRAUENKLEIDERBÖRSE - 17. Mai 2025
+	AndreasGemeinde 
+	Wilhelminenstra0e 4-5
+	24536 Neumünster
+
+Verkäufer: SAOHR
+Verkäufernummer: 0010
+
+Gesamtbetrag:
+Spende (X %):
+Auszahlung:
+
+...
